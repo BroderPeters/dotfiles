@@ -1,0 +1,18 @@
+#!/bin/bash
+NETWORKSTATUS=""
+#WIFISTATUS="$(nmcli radio wifi)"
+
+ACTIVECONNECTIONS=( $(nmcli -f type connection show --active ) )
+
+for CONNECTION in ${ACTIVECONNECTIONS[@]}; do
+    case $CONNECTION in 
+        "wifi")
+            NETWORKSTATUS=$NETWORKSTATUS" "
+            ;;
+	"ethernet")
+	    NETWORKSTATUS=$NETWORKSTATUS" "
+	    ;;
+    esac
+done
+
+echo $NETWORKSTATUS

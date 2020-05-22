@@ -1,0 +1,17 @@
+#!/bin/bash
+unreads=($(wmctrl -l | grep -e Telegram -e Signal | grep -oP '\(\d+\)' | grep -oP '\d+'))
+for number in "${unreads[@]}"; do
+	((totalunreads=totalunreads+$number))
+done
+
+if [ -z $totalunreads ]
+then 
+	exit 
+fi
+
+echo " "$totalunreads
+
+case $BLOCK_BUTTON in
+	1) wmctrl -s 2
+	;;
+esac

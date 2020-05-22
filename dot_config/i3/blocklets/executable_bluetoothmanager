@@ -1,0 +1,18 @@
+#!/bin/bash
+
+BLUETOOTHSTATUS=$(rfkill list bluetooth | grep 'Soft blocked')
+
+if [[ $BLUETOOTHSTATUS == *"Soft blocked: yes"* ]]; then
+	BLUETOOTHSTATUS="<span color='grey'></span>"
+	BLUETOOTHCOMMAND="rfkill unblock bluetooth"
+else
+	BLUETOOTHSTATUS=""
+	BLUETOOTHCOMMAND="rfkill block bluetooth"
+fi
+
+echo $BLUETOOTHSTATUS
+
+case $BLOCK_BUTTON in
+	1) exec $BLUETOOTHCOMMAND;;
+	3) exec blueberry;;
+esac

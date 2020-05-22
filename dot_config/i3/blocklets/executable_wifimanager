@@ -1,0 +1,20 @@
+#!/bin/bash
+#WIFISTATUS="$(nmcli radio wifi)"
+WIFISTATUS=$(nmcli radio wifi)
+
+if [ $WIFISTATUS = "enabled" ]; then
+	WIFISTATUS=""
+	#WIFICOMMAND="nmcli radio wifi off && pkill -RTMIN+12"
+	WIFICOMMAND="nmcli radio wifi off"
+else
+	WIFISTATUS="<span color='grey'></span>"
+	#WIFICOMMAND="nmcli radio wifi on && pkill -RTMIN+12"
+	WIFICOMMAND="nmcli radio wifi on"
+fi
+
+echo $WIFISTATUS
+
+case $BLOCK_BUTTON in
+	1) exec $WIFICOMMAND;;
+	3) exec nm-connection-editor -st 802-11-wireless;;
+esac

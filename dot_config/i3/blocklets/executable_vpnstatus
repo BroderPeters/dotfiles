@@ -1,0 +1,15 @@
+#!/bin/bash
+status=($(sudo pvpn --status))
+pvpnStatus=${status[5]}
+
+if [ $pvpnStatus != "Running" ]; then 
+#	echo " " ${status[14]}
+	echo " "
+	exit
+fi
+
+#publicIp=${status[12]}
+country=${status[24]}
+
+#echo " " $publicIp $country
+echo " " $country

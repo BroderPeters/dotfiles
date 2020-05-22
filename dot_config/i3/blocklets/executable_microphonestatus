@@ -1,0 +1,16 @@
+#!/bin/bash
+STATUS=( $(amixer get Capture) )
+STATUS=${STATUS[25]}
+case $STATUS in
+	"[on]")
+		OUTPUT=""
+		;;
+	"[off]")
+		OUTPUT=""
+		;;
+	*)
+		OUTPUT=" MIC"
+		;;
+esac
+
+echo $OUTPUT

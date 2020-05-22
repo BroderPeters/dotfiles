@@ -1,0 +1,20 @@
+#!/bin/bash
+NETWORKSTATUS=""
+
+ETHERNETSTATUS=$(nmcli -f type connection show --active | grep ethernet)
+
+if [ $ETHERNETSTATUS = "ethernet" ]; then
+	ETHERNETSTATUS=""
+	# ETHERNETCOMMAND="ifconfig enp0s31f6 down"
+	# need to figure out why sudo with NOPASSWD is not working...
+else
+	ETHERNETSTATUS="<span color='grey'></span>"
+	# ETHERNETCOMMAND="ifconfig enp0s31f6 up"
+fi
+
+echo $ETHERNETSTATUS
+
+case $BLOCK_BUTTON in
+#	1) exec $ETHERNETCOMMAND;;
+	3) exec nm-connection-editor -st 802-3-ethernet;;
+esac
