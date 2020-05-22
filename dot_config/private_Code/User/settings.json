@@ -1,0 +1,61 @@
+{
+    "workbench.activityBar.visible": true,
+    "editor.minimap.enabled": false,
+    "editor.renderControlCharacters": true,
+    "window.zoomLevel": 1,
+    "workbench.startupEditor": "newUntitledFile",
+    "files.associations": {
+        "*.csv": "csv (semicolon)",
+        "*.zpl": "ignore"
+    },
+    "terminal.explorerKind": "external",
+    "editor.formatOnSave": true,
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ],
+    "window.titleBarStyle": "custom",
+    "spellright.language": [
+        "en_US"
+    ],
+    "spellright.suggestionsInHints": false,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 15,
+    "explorer.confirmDragAndDrop": false,
+    "extensions.ignoreRecommendations": false,
+    "explorer.confirmDelete": true,
+    "breadcrumbs.enabled": true,
+    "editor.renderWhitespace": "none",
+    "csproj.excludeRegex": "*.cs",
+    "workbench.sideBar.location": "left",
+    "liveshare.showInStatusBar": "whileCollaborating",
+    "editor.wordWrap": "on",
+    "workbench.panel.defaultLocation": "right",
+    "terminal.integrated.shell.linux": "/usr/bin/fish",
+    "terraform.indexing": {
+        "enabled": false,
+        "liveIndexing": false,
+        "delay": 500,
+        "exclude": [
+            "**/*"
+        ]
+    },
+    "todo-tree.general.statusBar": "top three",
+    "todo-tree.highlights.enabled": true,
+    "editor.rulers": [
+        120
+    ],
+    "terraform.telemetry.enabled": false,
+    "omnisharp.loggingLevel": "warning",
+    "vssolution.xmlClosingTagSpace": true,
+    "[vb]": {
+        "files.encoding": "windows1252"
+    },
+    "todo-tree.tree.showScanModeButton": false,
+    "aws.profile": "profile:dev",
+    "[csharp]": {
+        "editor.defaultFormatter": "ms-dotnettools.csharp"
+    }
+}
