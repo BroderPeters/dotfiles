@@ -209,6 +209,9 @@ exec redshift -r -O 4000K
 
 # exec watch -n 10 feh --randomize --bg-center ~/Pictures/
 # exec_always feh --randomize --bg-center ~/Pictures/
-exec_always feh --bg-center /home/broderpeters/Downloads/28008049429_de3112bdee_o_pauline.png
+# exec_always feh --bg-center /home/broderpeters/Downloads/28008049429_de3112bdee_o_pauline.png
 
 exec nextcloud --background
+bindsym Print exec flameshot gui
+exec autorandr -c
+exec "sleep 60; nextcloud --background"
