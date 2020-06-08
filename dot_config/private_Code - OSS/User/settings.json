@@ -1,4 +1,4 @@
 {
-    "window.zoomLevel": 4,
-    "workbench.startupEditor": "none"
+    "window.zoomLevel": 1,
+    "workbench.startupEditor": "newUntitledFile"
 }
