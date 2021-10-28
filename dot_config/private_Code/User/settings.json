@@ -2,7 +2,6 @@
     "workbench.activityBar.visible": true,
     "editor.minimap.enabled": false,
     "editor.renderControlCharacters": true,
-    "window.zoomLevel": 1,
     "workbench.startupEditor": "newUntitledFile",
     "files.associations": {
         "*.csv": "csv (semicolon)",
@@ -32,8 +31,7 @@
     "workbench.sideBar.location": "left",
     "liveshare.showInStatusBar": "whileCollaborating",
     "editor.wordWrap": "on",
-    "workbench.panel.defaultLocation": "right",
-    "terminal.integrated.shell.linux": "/usr/bin/fish",
+    "terminal.integrated.shell.linux": "/usr/bin/zsh",
     "terraform.indexing": {
         "enabled": false,
         "liveIndexing": false,
@@ -57,5 +55,15 @@
     "aws.profile": "profile:dev",
     "[csharp]": {
         "editor.defaultFormatter": "ms-dotnettools.csharp"
-    }
+    },
+    "rust-client.rustupPath": "/home/bp/.cargo/bin/rustup",
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "workbench.editor.untitled.hint": "hidden",
+    "omnisharp.enableRoslynAnalyzers": true,
+    "window.zoomLevel": 1
 }
