@@ -238,7 +238,10 @@ bar {
 bindsym XF86TouchpadToggle exec ~/.config/i3/toggletouchpad.sh # toggle touchpad
 
 bindsym $mod+l exec i3lock
-bindsym $mod+Shift+Tab exec rofi -show window
+bindsym $mod+Shift+Tab exec rofi -show window \
+		-config ~/.config/rofi/rofidmenu.rasi
+bindsym $mod+d exec rofi -modi drun -show drun \
+		-config ~/.config/rofi/rofidmenu.rasi
 
 bindsym Print exec flameshot gui
 exec autorandr -c
